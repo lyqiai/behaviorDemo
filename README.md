@@ -9,6 +9,7 @@ Activity、Fragment、Dialog、PopupWindow在构建时在相应的时机插入�
 |Fragment   |Fragment				|onViewCreated(savedInstanceState: Bundle)    	|onResume()				|onStop()			|onDestroyView()
 |Dialog     |AppCompatDelegateImpl	|onCreate(savedInstanceState: Bundle)    		|onResume()				|onStop()			|onDestroy()
 |PopupWindow|调用类				  |调用类调用PopupWindow.showXXX    			       |无				|无			|调用类调用PopupWindow.dismiss()
+
 ### 控件级
 在基础控件的事件监听器接口回调注入相应的事件代码，并通过View树查找相应事件链路并记录该节点。
 
@@ -20,6 +21,7 @@ Activity、Fragment、Dialog、PopupWindow在构建时在相应的时机插入�
 |android.widget.RadioGroup$OnCheckedChangeListener|onCheckedChanged(RadioGroup group, @IdRes int checkedId)|RadioGroup
 |android.widget.SeekBar$OnSeekBarChangeListener|onStopTrackingTouch(SeekBar seekBar)|SeekBar
 |android.widget.RatingBar$OnRatingBarChangeListener|onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser)|RatingBar
+
 ### 自定义View
 自定义View事件通过注解(@BehaviorView)或者通过配置形式(TODO)进行事件代码的注入，但是有着一定的限制：
 1. 不支持函数式事件
