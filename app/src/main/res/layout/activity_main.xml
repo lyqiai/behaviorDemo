@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/actionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btn" />
+
+    <Switch
+        android:id="@+id/actionSw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        app:singleSelection="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/app_name" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/app_name" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton1" />
+
+        <RadioButton
+            android:id="@+id/r2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton2" />
+    </RadioGroup>
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
