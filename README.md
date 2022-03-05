@@ -4,7 +4,7 @@
 Activity、Fragment、Dialog、PopupWindow在构建时在相应的时机插入代码初始化当前页面级别的事件代码，并通过向RootView插入初始链路节点信息。
 
 |类 			|注入类				  |create  										 |曝光统计开始/恢复			|曝光暂停			|destroy
-|--------|--------|
+|--------|--------|--------|--------|--------|--------
 |Activity   |AppCompatDelegateImpl	|onCreate(savedInstanceState: Bundle)    	  	|onResume()				|onStop()			|onDestroy()
 |Fragment   |Fragment				|onViewCreated(savedInstanceState: Bundle)    	|onResume()				|onStop()			|onDestroyView()
 |Dialog     |AppCompatDelegateImpl	|onCreate(savedInstanceState: Bundle)    		|onResume()				|onStop()			|onDestroy()
@@ -14,7 +14,7 @@ Activity、Fragment、Dialog、PopupWindow在构建时在相应的时机插入�
 在基础控件的事件监听器接口回调注入相应的事件代码，并通过View树查找相应事件链路并记录该节点。
 
 | 接口  |方法|系统控件
-|--------|--------|
+|--------|--------|--------
 |android.view.View$OnClickListener    |onClick(View view)|All View
 |android.widget.CompoundButton$OnCheckedChangeListener    |onCheckedChanged(CompoundButton buttonView, boolean isChecked)|Switch、CheckBox、RadioButton、ToggleButton、Chip
 |com.google.android.material.chip.ChipGroup$OnCheckedChangeListener    |onCheckedChanged(ChipGroup group, @IdRes int checkedId)|ChipGroup
